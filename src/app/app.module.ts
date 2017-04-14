@@ -15,6 +15,8 @@ import { firebaseConfig, firebaseGoogleAuthentication } from '../firebase.config
 import { NavComponent } from '../pages/components/nav/nav.components';
 import { ModifyComponent } from './../pages/components/modify/modify.component';
 
+import { Camera } from '@ionic-native/camera';
+
 
 @NgModule({
   declarations: [
@@ -50,6 +52,9 @@ import { ModifyComponent } from './../pages/components/modify/modify.component';
     ModalPage,
     AddModalPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Camera  
+  ]
 })
 export class AppModule {}
